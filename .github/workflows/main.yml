@@ -50,7 +50,8 @@ jobs:
         run: |
           echo "Создаём README..."
           functions=$(grep -E '^def ' main.py | sed 's/def /- **/' | sed 's/:.*/**/')
-          sed "s|{{ functions }}|$functions|" README_template.md > README.md
+          # создаём временный файл
+          awk -v funcs="$functions" '{gsub(/\{\{ functions \}\}/, funcs)}1' README_template.md > README.md
 
       - name: Commit updated README
         run: |
