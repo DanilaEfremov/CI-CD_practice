@@ -6,7 +6,6 @@
 
 Простая программа на Python с двумя функциями:
 
-{{{functions}}}
 
 ```python
 def add_numbers(a, b):
