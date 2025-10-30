@@ -9,5 +9,3 @@
 - **multiply_numbers(a, b)**
 
 ---
-
-Документация генерируется с помощью GitHub Actions и pdoc.
